@@ -116,3 +116,48 @@ button:focus-visible {
   border: 1px solid var(--color-accent-2);
   float: right;
 }
+
+.section__heading {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 1em 1em;
+}
+.available {
+  margin: auto
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.available img {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+
+/*footer*/
+
+.site-footer {
+  margin: auto;
+  display: block;
+  align-items: center;  
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.footer__logo {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.footer__playlist {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
