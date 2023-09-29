@@ -64,6 +64,11 @@ header {
   width: 100%;
   z-index: 1000;
 }
+
+.banner__image {
+  width: 100%;
+}
+
 .nav_buttons {
   display: flex;
   justify-content: center;
@@ -89,7 +94,7 @@ button:focus-visible {
   background: rgba(0, 195, 255, 0.744);
 }
 
-/*main*/
+/*main Home*/
 
 .section {
   margin-top: 1.5rem;
@@ -124,13 +129,12 @@ button:focus-visible {
   margin: 1em 1em;
 }
 .available {
-  margin: auto
+  margin: auto;
   width: 100%;
   display: flex;
   gap: 1em;
   align-items: center;
   justify-content: space-between;
- 
 }
 
 .available img {
@@ -139,12 +143,28 @@ button:focus-visible {
   align-items: center;
 }
 
+/* Characters Layout*/
+
+.character {
+  column-gap: 1em;
+  row-gap: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem 1rem;
+  text-align: center;
+}
+
+.character__item {
+  border: 4px inset rgba(163, 163, 163, 0.82);
+  height: auto;
+}
+
 /*footer*/
 
 .site-footer {
   margin: auto;
   display: block;
-  align-items: center;  
+  align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
 }
