@@ -76,9 +76,9 @@ header {
   margin-top: 1rem;
 }
 
-button {
+#nav__menu {
   font-size: 0.7rem;
-  font-family: "Arial Narrow", Arial, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   color: azure;
   cursor: pointer;
   padding: 0.2rem 1em;
@@ -89,9 +89,10 @@ button {
   box-shadow: 0px 0px 7px 4px rgba(148, 148, 148, 0.46);
 }
 
-button:hover,
+#nav__menu:hover,
 button:focus-visible {
   background: rgba(0, 195, 255, 0.744);
+  ¨
 }
 
 /*main Home*/
@@ -126,7 +127,7 @@ button:focus-visible {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin: 1em 1em;
+  margin: auto;
 }
 .available {
   margin: auto;
@@ -154,9 +155,12 @@ button:focus-visible {
   text-align: center;
 }
 
-.character__item {
+.modal-trigger {
   border: 4px inset rgba(163, 163, 163, 0.82);
   height: auto;
+}
+
+.btn_gallery {
 }
 
 /*footer*/
