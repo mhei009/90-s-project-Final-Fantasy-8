@@ -92,7 +92,6 @@ header {
 #nav__menu:hover,
 button:focus-visible {
   background: rgba(0, 195, 255, 0.744);
-  ¨
 }
 
 /*main Home*/
@@ -155,13 +154,11 @@ button:focus-visible {
   text-align: center;
 }
 
-.modal-trigger {
+.modal_img {
   border: 4px inset rgba(163, 163, 163, 0.82);
   height: auto;
 }
-
-.btn_gallery {
-}
+/*img for modal*/
 
 /*footer*/
 
