@@ -11,6 +11,29 @@
   src: url("fonts/DotGothic16-Regular.ttf");
 }
 
+@font-face {
+  font-family: "playregular";
+  src: url("assets/fonts/Play-Regular.ttf");
+}
+
+p {
+  text-align: justify;
+  font-size: small;
+}
+
+h3 {
+  font-family: playregular;
+}
+
+h4 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: small;
+}
+
+& > {
+  margin: 0 0 0.5rem 0;
+}
+
 ul,
 li {
   list-style: none;
@@ -23,7 +46,8 @@ img {
 
 body {
   font-family: "Courier New", Courier, monospace;
-  background-image: url(assets/background/starybkueviolet.gif);
+  background-image: url(assets/background/electric\ backgrounf.gif);
+  background-repeat: repeat;
 }
 
 :root {
@@ -33,6 +57,22 @@ body {
 }
 
 /* Layout */
+
+#scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  border: 3px solid rgba(163, 163, 163, 0.82);
+  cursor: pointer;
+  background-color: black;
+}
 
 @media (min-width: 60rem) {
 }
@@ -58,7 +98,7 @@ header {
   display: block;
   justify-content: center;
   background-color: rgb(00, 00, 00);
-  padding: 1rem;
+  padding: 0.5rem;
   top: 0;
   left: 0;
   width: 100%;
@@ -72,26 +112,29 @@ header {
 .nav_buttons {
   display: flex;
   justify-content: center;
-  gap: 1em;
+  gap: 0.6em;
   margin-top: 1rem;
 }
-
 #nav__menu {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-family: "Courier New", Courier, monospace;
-  color: azure;
+  box-shadow: 0px 0px 2px 2px #27b9e6;
+  background: linear-gradient(to bottom, #78b7c2 5%, #4b72a3 100%);
+  background-color: #78b7c2;
+  border-radius: 2px;
+  border: 1px solid #4e6096;
+  display: inline-block;
   cursor: pointer;
-  padding: 0.2rem 1em;
-  background-color: rgb(64, 114, 150);
-  border: 0.2 em solid;
-  -webkit-box-shadow: 0px 0px 7px 4px rgba(148, 148, 148, 0.46);
-  -moz-box-shadow: 0px 0px 7px 4px rgba(148, 148, 148, 0.46);
-  box-shadow: 0px 0px 7px 4px rgba(148, 148, 148, 0.46);
+  color: #ffffff;
+  padding: 0em 0.5em;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #283966;
 }
 
 #nav__menu:hover,
 button:focus-visible {
-  background: rgba(0, 195, 255, 0.744);
+  background: rgba(0, 255, 251, 0.744);
+  transform: translate(0.1rem, -0.5ex);
 }
 
 /*main Home*/
@@ -120,6 +163,8 @@ button:focus-visible {
   height: auto;
   border: 1px solid var(--color-accent-2);
   float: right;
+  position: inherit;
+  margin-left: 1rem;
 }
 
 .section__heading {
@@ -127,6 +172,7 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   margin: auto;
+  color: #ffffff;
 }
 .available {
   margin: auto;
@@ -158,8 +204,31 @@ button:focus-visible {
   border: 4px inset rgba(163, 163, 163, 0.82);
   height: auto;
 }
-/*img for modal*/
 
+.modal__container {
+  padding: 1em;
+  max-width: 50vh;
+  border: 0;
+  box-shadow: 0 0 1em rgb(0 0 0 / 0.7);
+  background-color: black;
+  border: 1px solid var(--color-accent-2);
+  color: white;
+  top: 4rem;
+}
+
+.modal__container::backdrop {
+  background: rgb(0 0 0 / 0.7);
+}
+
+/*Inside Modal */
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  gap: 0.5em;
+}
 /*footer*/
 
 .site-footer {
@@ -171,7 +240,7 @@ button:focus-visible {
 }
 
 .footer__logo {
-  width: 20%;
+  width: 30%;
   display: flex;
   align-items: center;
   margin: auto;
