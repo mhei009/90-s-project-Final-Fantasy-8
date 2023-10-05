@@ -119,8 +119,8 @@ header {
   font-size: 0.9rem;
   font-family: "Courier New", Courier, monospace;
   box-shadow: 0px 0px 2px 2px #27b9e6;
-  background: linear-gradient(to bottom, #78b7c2 5%, #4b72a3 100%);
-  background-color: #78b7c2;
+  background: linear-gradient(to bottom, #495557 5%, #4b72a3 100%);
+  background-color: #696969;
   border-radius: 2px;
   border: 1px solid #4e6096;
   display: inline-block;
@@ -144,6 +144,20 @@ button:focus-visible {
   margin: 1rem 1rem;
   color: white;
   background-color: black;
+  align-items: center;
+  border: 3px solid rgb(6, 174, 225);
+  -webkit-box-shadow: 0px 0px 12px 5px rgba(3, 217, 255, 0.53);
+  -moz-box-shadow: 0px 0px 12px 5px rgba(3, 217, 255, 0.53);
+  padding: 1rem;
+}
+
+.section__video {
+  margin-top: 1.5rem;
+  margin: 1rem 1rem;
+  color: white;
+  background-color: black;
+  align-items: center;
+  text-align: center;
   border: 3px solid rgb(6, 174, 225);
   -webkit-box-shadow: 0px 0px 12px 5px rgba(3, 217, 255, 0.53);
   -moz-box-shadow: 0px 0px 12px 5px rgba(3, 217, 255, 0.53);
@@ -151,7 +165,7 @@ button:focus-visible {
 }
 
 .section__paragraph {
-  margin-top: 2rem;
+  margin-top: 0.2rem;
 }
 
 .gallery__video {
@@ -200,6 +214,21 @@ button:focus-visible {
 }
 /* Characters Layout*/
 
+#character_menu {
+  box-shadow: 4px 13px 10px -12px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 11px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+
+  font-size: 0.7em;
+  padding: 0.5em 0.5em;
+  text-decoration: none;
+  text-shadow: 0px -2px 0px #3d768a;
+}
+
 .character {
   column-gap: 1em;
   row-gap: 1em;
@@ -214,15 +243,27 @@ button:focus-visible {
   height: auto;
 }
 
+.modal__item {
+  width: 50%;
+  height: auto;
+  margin-top: 1em;
+}
+
 .modal__container {
-  padding: 1em;
-  max-width: 50vh;
+  padding: 0.5em;
+  max-width: 40vh;
   border: 0;
   box-shadow: 0 0 1em rgb(0 0 0 / 0.7);
   background-color: black;
-  border: 1px solid var(--color-accent-2);
+  border: 2px solid var(--color-accent-2);
   color: white;
-  top: 4rem;
+  margin-top: 0.5em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 18rem;
 }
 
 .modal__container::backdrop {
@@ -234,9 +275,28 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  margin: 0.5em 0.5em 0.5em 0.5em;
-  gap: 0.5em;
+  text-align: start;
+  margin: 0.4em 0.4em 0.4em 0.4em;
+  gap: 0.3em;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#close_btn {
+  font-size: 0.9rem;
+  font-family: "Courier New", Courier, monospace;
+  box-shadow: 0px 0px 2px 2px #27b9e6;
+  background: linear-gradient(to bottom, #78b7c2 5%, #4b72a3 100%);
+  background-color: #78b7c2;
+  border-radius: 2px;
+  border: 1px solid #4e6096;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 0em 0.5em;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #283966;
 }
 
 /*battle layout*/
