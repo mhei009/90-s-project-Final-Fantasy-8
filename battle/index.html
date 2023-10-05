@@ -6,19 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <title>Battle System</title>
-
-
 </head>
 
 <body>
-    <button id="scrollToTopButton"><img src="../assets/images/arrowblackback.png" height="22" width="25"
-            title="Go to top"></button>
-    <div class="wrapper">
-        <section class="section">
-            <h3 class="section__heading">Final Fantasy VIII</h3>
-            <p class="section__paragraph">
-                BATTLE
+    <header>
+        <div class="wrapper">
+            <img src="../assets/background/rinoa squall copy.webp" class="banner__image" />
+        </div>
+        <nav class="nav_button">
+            <ul class="nav_buttons">
+                <li><a href="../index.html"><button id="nav__menu">Home</button></a> </li>
+                <li><a href="../story/index.html"><button id="nav__menu">Story</button></a> </li>
+                <li><a href="../characters/index.html"><button id="nav__menu">Characters</button></a> </li>
+                <li><a href="index.html"><button id="nav__menu">Battle</button></a> </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
 
+    <main>
+        <button id="scrollToTopButton"><img src="../assets/images/arrowblackback.png" height="22" width="25"
+                title="Go to top"></button>
+        <div class="wrapper">
+            <section class="section">
+                <h3 class="section__heading">Battle Sytstem</h3>
+                <p class="section__paragraph">
+
+                    The combat in Final Fantasy VIII is menu driven and uses the Active Time Battle (ATB) system to
+                    determine when characters and enemies can perform actions. It features a bar that slowly fills up,
+                    and when it does, it allows the player to choose a command.</p>
+                <img class="battle_img" src="../assets/images/cactuar attack.webp" alt="Cactuar attacking Squall">
+
+                <p class="section__paragraph">
+                    Active mode is a battle mode where the
+                    ATB gauge fills up no matter what is happening in the battle. It emulates real time and makes the
+                    battle faster.
+                </p>
+
+                <img class="battle_img" src="../assets/images/atb battle.webp"
+                    alt="Yellow line is the bar that fills up for atb ">
+            </section>
+
+            <section class="section" id="Summon__gf">
+                <h3 class="section__heading">Summoning Guardian Forces</h3>
+                <p class="section__paragraph">
+
+                    <img class="gf_img" src="../assets/images/ifrit summon.gif" alt="Ifrits attack when summoned">
+                    GFs can be summoned in battle with the “GF” Command. This will result in a special command being
+                    performed that is unique to each GF. These commands can vary from multi-target elemental attacks to
+                    commands that buff the party.
+
+                    <img class="gf_img" src="../assets/images/gd_siren.webp" alt="Siren being summoned">
+
+                <p class="section__paragraph">Summoning a GF will initially swap your character’s health bar with the
+                    GF’s HP and the Charge Time
+                    gauge (as shown by the blue bar next to the GF’s name). The charge time goes down and denotes how
+                    much time is left before the GF’s unique command is used. The speed at which the Charge Time goess
+                    down is based on a GF’s Compatibility with the character they are junctioned to.</p>
+
+                <img class="gf_img" src="../assets/images/GF_Diablos_menu.jpeg" alt="equipping junction from gf diable">
+
+                <p class="section__paragraph">While the Charge Time Gauge goess down, Commands that would damage the
+                    character will instead damage
+                    the GF and affect their HP. If a GF’s HP falls to zero, then the summon will be canceled and the GF
+                    can’t be summoned again until they are revived. However, you can still junction them and they can
+                    receive AP and EXP as normal.
+                </p>
+            </section>
+
+            <section class="section">
+                <h3 class="section__heading">Limit Breaks</h3>
+                <p class="section__paragraph">
+
+                    <img class="banner__image" src="../assets/images/limitbreak.gif"
+                        alt="rinoa limit break with Angelo">
+                <p class="section__paragraph"> Limit breaks are powerful commands that are only accessible at certain
+                    points in combat. Most
+                    commonly, they’re available when a character is at low health. When a limit break is available, it’s
+                    indicated by anright arrow icon.</p>
+                <img class="battle_img" src="../assets/images/limit break indicator.webp"
+                    alt="cursor indicating that limit break is available">
+
+                <p class="section__paragraph"> To use a Limit Break, the character must be above a certain crisis level.
+                    As the Crisis Level
+                    increases further, the Limit Break will become more powerful.</p>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+
+        <h4 class="section__heading">BGM</h4>
+        <iframe style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/1GgCJj6oin6shpEtKG6kf1?utm_source=generator&theme=0"
+            width="60%" height="auto" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+            class="footer__playlist"></iframe>
+
+        <img src="../assets/images/Square_Enix_Logo.webp" class="footer__logo" alt="square-enix logo">
+        </div>
+    </footer>
+
+    <script src="../battle/script.js"></script>
 </body>
 
 </html>

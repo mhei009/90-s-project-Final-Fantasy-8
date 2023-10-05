@@ -17,17 +17,17 @@
 }
 
 p {
-  text-align: justify;
-  font-size: small;
+  font-size: 1em;
 }
 
 h3 {
   font-family: playregular;
+  color: rgb(0, 195, 255);
 }
 
 h4 {
   font-family: "Courier New", Courier, monospace;
-  font-size: small;
+  font-size: 1em;
 }
 
 & > {
@@ -58,6 +58,13 @@ body {
 
 /* Layout */
 
+.wrapper {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0.5rem;
+}
+
 #scrollToTopButton {
   display: none;
   position: fixed;
@@ -75,13 +82,6 @@ body {
 }
 
 @media (min-width: 60rem) {
-}
-
-.wrapper {
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 0.5rem;
 }
 
 @media (min-width: 23rem) {
@@ -144,7 +144,7 @@ button:focus-visible {
   margin: 1rem 1rem;
   color: white;
   background-color: black;
-  border: 3px solid rgb(0, 195, 255);
+  border: 3px solid rgb(6, 174, 225);
   -webkit-box-shadow: 0px 0px 12px 5px rgba(3, 217, 255, 0.53);
   -moz-box-shadow: 0px 0px 12px 5px rgba(3, 217, 255, 0.53);
   padding: 1rem;
@@ -172,7 +172,7 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   margin: auto;
-  color: #ffffff;
+  color: var(--color-accent-2);
 }
 .available {
   margin: auto;
@@ -189,6 +189,15 @@ button:focus-visible {
   align-items: center;
 }
 
+/*story Layout*/
+.story_img {
+  height: auto;
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 80%;
+  margin-top: 1em;
+}
 /* Characters Layout*/
 
 .character {
@@ -229,6 +238,27 @@ button:focus-visible {
   margin: 0.5em 0.5em 0.5em 0.5em;
   gap: 0.5em;
 }
+
+/*battle layout*/
+
+.battle_img {
+  height: auto;
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 80%;
+  margin-top: 1em;
+}
+
+.gf_img {
+  height: auto;
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 80%;
+  margin-top: 1em;
+}
+
 /*footer*/
 
 .site-footer {
