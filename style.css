@@ -26,8 +26,8 @@ h3 {
 }
 
 h4 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1em;
+  font-family: playregular;
+  font-size: 0.9em;
 }
 
 & > {
@@ -204,7 +204,7 @@ button:focus-visible {
 }
 
 /*story Layout*/
-.story_img {
+.story__img {
   height: auto;
   position: relative;
   display: block;
@@ -214,7 +214,7 @@ button:focus-visible {
 }
 /* Characters Layout*/
 
-#character_menu {
+#character__menu {
   box-shadow: 4px 13px 10px -12px #276873;
   background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
   background-color: #599bb3;
@@ -222,7 +222,6 @@ button:focus-visible {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-
   font-size: 0.7em;
   padding: 0.5em 0.5em;
   text-decoration: none;
@@ -321,7 +320,7 @@ button:focus-visible {
 
 /*footer*/
 
-.site-footer {
+.site__footer {
   margin: auto;
   display: block;
   align-items: center;
@@ -334,10 +333,13 @@ button:focus-visible {
   display: flex;
   align-items: center;
   margin: auto;
+  margin-bottom: 2em;
 }
 
 .footer__playlist {
   display: flex;
   align-items: center;
   margin: auto;
+  margin-top: 1em;
+  border-bottom: 1px solid;
 }
