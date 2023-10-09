@@ -28,8 +28,26 @@
         <button id="scrollToTopButton"><img src="../assets/images/arrowblackback.png" height="22" width="25"
                 title="Go to top"></button>
         <div class="wrapper">
+
+            <nav class="nav_button">
+                <ul class="nav_buttons">
+                    <li><a href="#battle__system"><button id="menu__sub">Battle System</button></a></li>
+                    <li><a href="#Guardian__Forces"><button id="menu__sub">Guardian Forces</button></a></li>
+                    <li><a href="#limit__breaks"><button id="menu__sub">Limit Breaks</button></a></li>
+                </ul>
+            </nav>
+
             <section class="section">
-                <h3 class="section__heading">Battle Sytstem</h3>
+                <h5 class="section__heading">Battle Preview</h5>
+                <video controls poster="../assets/images/gunblade.jpeg" width="100%">
+                    <source src="../assets/video/battletrailer.mp4" alt="final fantasy 8 battle trailer" controls
+                        class="gallery__video" controls>
+                </video>
+            </section>
+
+
+            <section class="section">
+                <h3 class="section__heading" id="battle__system">Battle Sytstem</h3>
                 <p class="section__paragraph">
 
                     The combat in Final Fantasy VIII is menu driven and uses the Active Time Battle (ATB) system to
@@ -48,15 +66,15 @@
             </section>
 
             <section class="section" id="Summon__gf">
-                <h3 class="section__heading">Summoning Guardian Forces</h3>
+                <h3 class="section__heading" id="Guardian__Forces">Summoning Guardian Forces</h3>
                 <p class="section__paragraph">
 
-                    <img class="gf_img" src="../assets/images/ifrit summon.gif" alt="Ifrits attack when summoned">
+                    <img class="battle_img" src="../assets/images/ifrit summon.gif" alt="Ifrits attack when summoned">
                     GFs can be summoned in battle with the “GF” Command. This will result in a special command being
                     performed that is unique to each GF. These commands can vary from multi-target elemental attacks to
                     commands that buff the party.
 
-                    <img class="gf_img" src="../assets/images/gd_siren.webp" alt="Siren being summoned">
+                    <img class="battle_img" src="../assets/images/gd_siren.webp" alt="Siren being summoned">
 
                 <p class="section__paragraph">Summoning a GF will initially swap your character’s health bar with the
                     GF’s HP and the Charge Time
@@ -64,7 +82,8 @@
                     much time is left before the GF’s unique command is used. The speed at which the Charge Time goess
                     down is based on a GF’s Compatibility with the character they are junctioned to.</p>
 
-                <img class="gf_img" src="../assets/images/GF_Diablos_menu.jpeg" alt="equipping junction from gf diable">
+                <img class="battle_img" src="../assets/images/GF_Diablos_menu.jpeg"
+                    alt="equipping junction from gf diable">
 
                 <p class="section__paragraph">While the Charge Time Gauge goess down, Commands that would damage the
                     character will instead damage
@@ -75,11 +94,10 @@
             </section>
 
             <section class="section">
-                <h3 class="section__heading">Limit Breaks</h3>
+                <h3 class="section__heading" id="limit__breaks">Limit Breaks</h3>
                 <p class="section__paragraph">
 
-                    <img class="banner__image" src="../assets/images/limitbreak.gif"
-                        alt="rinoa limit break with Angelo">
+                    <img class="battle_img" src="../assets/images/limitbreak.gif" alt="rinoa limit break with Angelo">
                 <p class="section__paragraph"> Limit breaks are powerful commands that are only accessible at certain
                     points in combat. Most
                     commonly, they’re available when a character is at low health. When a limit break is available, it’s
@@ -100,7 +118,7 @@
         <h4 class="section__heading">BGM</h4>
         <iframe style="border-radius:12px"
             src="https://open.spotify.com/embed/playlist/1GgCJj6oin6shpEtKG6kf1?utm_source=generator&theme=0"
-            width="60%" height="auto" frameBorder="0" allowfullscreen=""
+            width="90%" height="auto" frameBorder="0" allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
             class="footer__playlist"></iframe>
 

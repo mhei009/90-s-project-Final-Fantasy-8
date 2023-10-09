@@ -7,11 +7,6 @@
 /*global*/
 
 @font-face {
-  font-family: "dotgothic16";
-  src: url("fonts/DotGothic16-Regular.ttf");
-}
-
-@font-face {
   font-family: "playregular";
   src: url("assets/fonts/Play-Regular.ttf");
 }
@@ -53,7 +48,8 @@ body {
 :root {
   --color-primary: rgb(00, 00, 00);
   --color-accent-1: rgb(64, 114, 150);
-  --color-accent-2: rgb(0, 195, 255);
+  --color-accent-2: rgb(6, 174, 225);
+  --color-accent-3: rgb(255, 255, 255);
 }
 
 /* Layout */
@@ -78,7 +74,7 @@ body {
   border-radius: 50%;
   border: 3px solid rgba(163, 163, 163, 0.82);
   cursor: pointer;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 @media (min-width: 60rem) {
@@ -125,7 +121,7 @@ header {
   border: 1px solid #4e6096;
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
+  color: var(--color-accent-3);
   padding: 0em 0.5em;
   text-decoration: none;
   text-shadow: 0px 1px 0px #283966;
@@ -141,26 +137,15 @@ button:focus-visible {
 
 .section {
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   margin: 1rem 1rem;
-  color: white;
+  color: var(--color-accent-3);
   background-color: black;
   align-items: center;
-  border: 3px solid rgb(6, 174, 225);
-  -webkit-box-shadow: 0px 0px 12px 5px rgba(3, 217, 255, 0.53);
-  -moz-box-shadow: 0px 0px 12px 5px rgba(3, 217, 255, 0.53);
-  padding: 1rem;
-}
-
-.section__video {
-  margin-top: 1.5rem;
-  margin: 1rem 1rem;
-  color: white;
-  background-color: black;
-  align-items: center;
-  text-align: center;
-  border: 3px solid rgb(6, 174, 225);
-  -webkit-box-shadow: 0px 0px 12px 5px rgba(3, 217, 255, 0.53);
-  -moz-box-shadow: 0px 0px 12px 5px rgba(3, 217, 255, 0.53);
+  text-align: start;
+  border: 3px solid var(--color-accent-2);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(3, 217, 255, 0.53);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(3, 217, 255, 0.53);
   padding: 1rem;
 }
 
@@ -204,6 +189,41 @@ button:focus-visible {
 }
 
 /*story Layout*/
+
+.marquee {
+  height: 1rem;
+  width: auto;
+  color: var(--color-accent-2);
+  overflow: hidden;
+  position: relative;
+  background-color: darkslategrey;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 30px;
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 10s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
 .story__img {
   height: auto;
   position: relative;
@@ -212,20 +232,21 @@ button:focus-visible {
   width: 80%;
   margin-top: 1em;
 }
+
 /* Characters Layout*/
 
-#character__menu {
+#menu__sub {
   box-shadow: 4px 13px 10px -12px #276873;
   background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
-  background-color: #599bb3;
+  background-color: rgb(89 155 179);
   border-radius: 11px;
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
+  color: var(--color-accent-3);
   font-size: 0.7em;
   padding: 0.5em 0.5em;
   text-decoration: none;
-  text-shadow: 0px -2px 0px #3d768a;
+  text-shadow: 0px -2px 0px rgb(61 118 138);
 }
 
 .character {
@@ -242,6 +263,28 @@ button:focus-visible {
   height: auto;
 }
 
+.modal_img:hover {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .modal__item {
   width: 50%;
   height: auto;
@@ -255,7 +298,7 @@ button:focus-visible {
   box-shadow: 0 0 1em rgb(0 0 0 / 0.7);
   background-color: black;
   border: 2px solid var(--color-accent-2);
-  color: white;
+  color: var(--color-accent-3);
   margin-top: 0.5em;
   position: fixed;
   top: 50%;
@@ -292,7 +335,7 @@ button:focus-visible {
   border: 1px solid #4e6096;
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
+  color: var(--color-accent-3);
   padding: 0em 0.5em;
   text-decoration: none;
   text-shadow: 0px 1px 0px #283966;
@@ -307,6 +350,7 @@ button:focus-visible {
   margin: auto;
   width: 80%;
   margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .gf_img {
@@ -316,6 +360,7 @@ button:focus-visible {
   margin: auto;
   width: 80%;
   margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 /*footer*/
