@@ -1,28 +1,20 @@
+/*------global------*/
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/*------global------*/
-
 @font-face {
   font-family: "playregular";
   src: url("assets/fonts/Play-Regular.ttf");
 }
 
-p {
-  font-size: 1em;
-}
-
-h3 {
-  font-family: playregular;
-  color: rgb(0, 195, 255);
-}
-
+h3,
 h4 {
   font-family: playregular;
-  font-size: 0.9em;
+  color: rgb(0, 195, 255);
 }
 
 h5 {
@@ -85,6 +77,7 @@ body {
   background-color: rgb(0, 0, 0);
 }
 /*-----------Media Breakpoints---------------*/
+
 @media (min-width: 10rem) {
   .nav_buttons {
     gap: 1em;
@@ -95,6 +88,7 @@ body {
     gap: 1em;
   }
 }
+
 @media (min-width: 23rem) {
   .nav_buttons {
   }
@@ -559,7 +553,7 @@ button:focus-visible {
   margin-top: 1em;
 }
 
-/*--------footer---------*/
+/*--------footer Layout---------*/
 
 .chocobo {
   width: 5%;
