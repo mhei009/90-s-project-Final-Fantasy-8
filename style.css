@@ -25,6 +25,10 @@ h4 {
   font-size: 0.9em;
 }
 
+h5 {
+  color: white;
+}
+
 ul,
 li {
   list-style: none;
@@ -39,12 +43,13 @@ body {
   font-family: "Courier New", Courier, monospace;
   background-image: url(assets/background/electric\ backgrounf.gif);
   background-repeat: repeat;
+  background-color: var(--color-primary);
 }
 
 :root {
   --color-primary: rgb(00, 00, 00);
   --color-accent-1: rgb(64, 114, 150);
-  --color-accent-2: rgb(6, 174, 225);
+  --color-accent-2: rgb(21, 134, 169);
   --color-accent-3: rgb(255, 255, 255);
 }
 
@@ -80,15 +85,32 @@ body {
   background-color: rgb(0, 0, 0);
 }
 /*-----------Media Breakpoints---------------*/
+@media (min-width: 10rem) {
+  .nav_buttons {
+    gap: 1em;
+  }
 
+  #nav__menu {
+    font-size: 1rem;
+    gap: 1em;
+  }
+}
 @media (min-width: 23rem) {
+  .nav_buttons {
+  }
+
+  #nav__menu {
+    font-size: 1rem;
+    gap: 1em;
+  }
+
   .gallery__image {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  .character {
+  .character__container {
     grid-template-columns: 1fr 1fr;
   }
   .guardian__list {
@@ -111,7 +133,7 @@ body {
 }
 
 @media (min-width: 31rem) {
-  .character {
+  .character__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
@@ -125,15 +147,11 @@ body {
 
 @media (min-width: 37rem) {
   .section {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     margin: 2rem 2rem;
     padding: 0.5rem;
     text-align: start;
-  }
-
-  #nav__menu {
-    font-size: 1.4rem;
   }
 
   .nav_buttons {
@@ -158,6 +176,14 @@ body {
 }
 
 @media (min-width: 56rem) {
+  #nav__menu {
+    font-size: 1.4rem;
+  }
+
+  .nav_buttons {
+    gap: 4;
+  }
+
   .guardian__list {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     position: relative;
@@ -206,6 +232,11 @@ body {
     margin: auto;
     gap: 1;
   }
+
+  .footer__logo {
+    max-width: 15%;
+    height: auto;
+  }
 }
 
 /*------header*------*/
@@ -229,12 +260,10 @@ header {
 .nav_buttons {
   display: flex;
   justify-content: center;
-  gap: 0.6em;
   margin-top: 1rem;
 }
 
 #nav__menu {
-  font-size: 1rem;
   font-family: "Courier New", Courier, monospace;
   box-shadow: 0px 0px 2px 2px #27b9e6;
   background: linear-gradient(to bottom, #495557 5%, #4b72a3 100%);
@@ -366,6 +395,7 @@ button:focus-visible {
   display: block;
   margin: auto;
   width: 80%;
+  height: auto;
   margin-top: 1em;
 }
 
@@ -385,23 +415,34 @@ button:focus-visible {
   text-shadow: 0px -2px 0px rgb(61 118 138);
 }
 
-.character {
+.character__container {
   column-gap: 1em;
   row-gap: 1em;
   display: grid;
   margin: 1rem 1rem;
   text-align: center;
+  margin: auto;
+  padding-left: 15em;
+  padding-right: 15em;
+  padding-bottom: 2em;
+}
+
+.gallery__item {
+  margin: auto;
+  display: grid;
 }
 
 .modal_img {
   border: 4px inset rgba(163, 163, 163, 0.82);
   height: auto;
+  cursor: wait;
 }
 
 .modal_img:hover {
   opacity: 1;
   -webkit-animation: flash 1.5s;
   animation: flash 1.5s;
+  cursor: wait;
 }
 @-webkit-keyframes flash {
   0% {
@@ -494,8 +535,9 @@ button:focus-visible {
   display: grid;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+
   position: relative;
+  padding-left: 2em;
 }
 
 .gf_img {
@@ -507,7 +549,10 @@ button:focus-visible {
 /*--------footer---------*/
 
 .chocobo {
-  width: 10%;
+  width: 5%;
+  height: auto;
+  max-width: 5%;
+  max-height: 3%;
 }
 
 .site__footer {
@@ -515,16 +560,34 @@ button:focus-visible {
   display: block;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin: 1rem 1rem;
+  color: var(--color-accent-3);
+  align-items: center;
+  text-align: center;
+  border-top: 5px solid rgba(45, 45, 45, 0.82);
+  box-shadow: 0px 0px 10px 3px rgba(101, 101, 101, 0.53);
+  box-shadow: 0px 0px 10px 3px rgba(62, 62, 62, 0.53);
+  max-height: 18rem;
+  background-image: url(./assets/images/gunblade2.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
 }
 
 .footer__logo {
-  width: 20%;
+  width: 30%;
+  height: auto;
   display: flex;
   align-items: center;
   margin: auto;
   margin-bottom: 1em;
-  max-width: 30%;
+}
+
+#trademark {
+  color: var(--color-accent-3);
 }
 
 .footer__playlist {
