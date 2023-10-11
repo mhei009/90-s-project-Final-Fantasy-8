@@ -314,6 +314,17 @@ button:focus-visible {
   padding: 1rem;
 }
 
+#section__available {
+  max-width: 79rem;
+  align-self: center;
+  position: center;
+  margin: auto;
+  background-image: url(./assets/images/availabla\ background.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
 .gallery__video {
   width: 100%;
 }
@@ -339,6 +350,7 @@ button:focus-visible {
 .available {
   margin: auto;
   width: 100%;
+  height: auto;
   display: flex;
   gap: 1em;
   align-items: center;
@@ -347,6 +359,7 @@ button:focus-visible {
 
 .available img {
   width: 20%;
+  height: auto;
   display: flex;
   align-items: center;
   gap: 1;
