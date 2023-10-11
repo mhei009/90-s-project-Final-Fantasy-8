@@ -414,7 +414,7 @@ button:focus-visible {
 
 /* -------Characters Page Layout--------*/
 
-#menu__sub {
+#menu-sub__button {
   box-shadow: 4px 13px 10px -12px #276873;
   background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
   background-color: rgb(89 155 179);
